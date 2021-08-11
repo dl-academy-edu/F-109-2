@@ -1,0 +1,37 @@
+
+/* MAP */
+
+.map .container{
+    position: relative;
+  }
+  
+  .map-wrapper {
+    background: #008752;max-width: 380px;
+    width: 100%;
+    padding: 53px 44px;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    color: #fff;
+    font-size: 15px;
+    line-height: 18px;
+  }
+  .map-title {
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 36px;
+    margin: 0 0 16px;
+  }
+  .map-phone {
+    color: #fff;
+    text-decoration: none;
+    margin: 23px 0;
+    display: block;
+  }
+  
+  
+  
+  .map > img {
+    width: 100%;
+  }
+  

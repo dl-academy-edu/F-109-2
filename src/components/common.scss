@@ -1,28 +1,193 @@
-// Подключение компонентов
-@import "./header/header";
-@import "./footer/footer";
+* {
+  box-sizing: border-box;
+}
 
 body {
-  font-family: Oswald, sans-serif;
+  font-family: 'Lato', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  color: #2C3036;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 .container {
-  width: 100%;
   max-width: 1180px;
+  width: 100%;
   margin: 0 auto;
-  padding-right: 20px;
-  padding-left: 20px;
 }
 
-.title-block {
-  margin: 0 0 20px 0;
-
-  &_one {
-    font-size: 30px;
-    text-transform: uppercase;
-  }
-  &_two {
-    font-size: 25px;
-    max-width: 500px;
-  }
+.unlisting {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
+
+.hidden {
+  font-size: 0;
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+
+/* HEADER */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 33px auto;
+}
+
+.header-menu {
+  margin: 0 auto 0 25px;
+}
+
+.header-nav {
+  display: flex;
+  font-weight: bold;
+}
+
+.header-nav a {
+  color: #333333;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+.header-phone {
+  margin-right: 24px;
+  font-weight: 800;
+  font-size: 17px;
+  line-height: 20px;
+  color: #95459A;
+  text-decoration: none;
+}
+
+fieldset {
+  border: none;
+  margin: 0 -10px;
+}
+
+label,
+legend {
+  font-size: 18px;
+  line-height: 22px;
+  color: #6B6A6A;
+  margin-bottom: 6px;
+}
+
+input,
+textarea {
+  border: 2px solid #777;
+  background: transparent;
+  height: 50px;
+  padding: 12px 20px;
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #FFB612;
+}
+
+.label-wrapper:focus-within label {
+  color: #FFB612;
+}
+
+textarea {
+  resize: none;
+  height: auto;
+}
+
+.field-2-column {
+  display: flex;
+  justify-content: space-between;
+}
+
+.field-2-column .label-wrapper {
+  max-width: 280px;
+  width: 100%;
+}
+
+
+.label-wrapper {
+  display: flex;
+  flex-direction: column;
+  /* flex-direction: column-reverse; */
+
+}
+
+.checkbox-list,
+.radio-list {
+  display: flex;
+}
+
+.checkbox-input,
+.radio-input {
+  display: none;
+}
+
+.checkbox-label,
+.radio-label {
+  position: relative;
+  display: block;
+  font-size: 18px;
+  line-height: 22px;
+  color: #6B6A6A;
+  padding-left: 30px;
+  cursor: pointer;
+  margin-right: 40px;
+  margin-bottom: 20px;
+}
+
+.checkbox-label:before,
+.checkbox-label:after,
+.radio-label:before,
+.radio-label:after {
+  content: "";
+  display: block;
+  position: absolute;
+  
+}
+
+.checkbox-label:before,
+.radio-label:before  {
+  top: -2px;
+  left: 1px;
+  background: transparent;
+  border: 2px solid #777;
+  width: 21px;
+  height: 21px;
+}
+
+.checkbox-label:after,
+.radio-label:after {
+  top: 2px;
+  left: 5px;
+  background: #95459A;
+  width: 17px;
+  height: 17px;
+  opacity: 0;
+}
+
+.radio-label:before,
+.radio-label:after {
+  border-radius: 50%;
+}
+
+.checkbox-input:checked + .checkbox-label:after,
+.radio-input:checked + .radio-label:after {
+  opacity: 1;
+}
+
+// Подключение компонентов
+@import "./header/header";
+@import "./footer/footer";
+@import "./button/button";
+@import "./map/map";
+@import "./service-card/service-card";

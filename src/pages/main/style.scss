@@ -1,31 +1,148 @@
-main.index-main {
-  padding: 30px 0;
+
+/* BANNER */
+
+.main-banner {
+  background-image: url('../img/banner.jpg');
+  background-color: #E0E7ED;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  background: url('../img/banner.jpg') #E0E7ED no-repeat center;
 }
 
-.parallax-card {
-  max-width: 300px;
+.main-banner .container {
+  padding: 100px 0 200px;
+}
 
-  &__wrapper-img {
-    position: relative;
-    overflow: hidden;
-    padding-bottom: 100%;
-  }
-  &__img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: none;
-    height: 100%;
-    min-width: 100.5%;
-  }
-  &__description {
-    background-color: #ff5722;
-    padding: 20px 10px;
-    text-align: center;
-    color: #fff;
-  }
-  &__paragraph {
-    margin: 0;
-  }
+.main-banner-title {
+  font-weight: 900;
+  font-size: 90px;
+  line-height: 100%;
+  color: #00559D;
+  max-width: 70%;
+}
+
+.banner-button {
+  font-size: 24px;
+  line-height: 29px;
+  max-width: 360px;
+}
+
+
+/* SERVICES */
+
+.services {
+  margin-bottom: 110px;
+  margin-top: 80px;
+}
+
+.services-title {
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 50px;
+  text-transform: uppercase;
+  color: #00559D;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.services-list {
+  display: flex;
+  margin: -10px;
+  flex-wrap: wrap;
+}
+
+.services-item {
+  margin: 10px;
+  max-width: 280px;
+  flex-wrap: wrap;
+}
+
+.services-name {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 36px;
+  color: #2C3036;
+  text-decoration: none;
+  margin: 20px 0;
+  display: block;
+}
+
+
+/* ABOUT */
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 106px;
+}
+.about-info {
+  max-width: 45%;
+}
+.about-title {
+  font-weight: 900;
+  font-size: 72px;
+  line-height: 100%;
+  color: #005DAB;
+  margin: 0 0 46px;
+}
+.about-desc {
+  font-size: 18px;
+  line-height: 28px;
+  margin-bottom: 20px;
+}
+
+
+/* BRANDS */
+.brands-list {
+  -webkit-display: flex;
+      -moz-display: flex;
+          display: flex;
+  -webkit-align-items: center;
+      -moz-align-items: center;
+          align-items: center;
+  -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
+          justify-content: space-between;
+  margin-bottom: 80px;
+}
+.brands-list img {
+  opacity: 0.7;
+}
+
+
+/* POPUP */
+
+.popup-wrapper {
+  display: none;
+  background: rgba(149, 69, 154, 0.9);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.popup-wrapper_open {
+  display: block;
+}
+
+.popup-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 680px;
+  width: 100%;
+  background: #EEEEEE;
+  margin: 0 auto 80px;
+  padding: 50px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  border: none;
 }
