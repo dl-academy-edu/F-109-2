@@ -1,24 +1,29 @@
-header {
-  background-color: #89f7fe;
-  height: 80px;
+
+/* HEADER */
+
+.header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-
-  span {
-    padding-right: 20px;
+  margin: 33px auto;
+  &__menu {
+    margin: 0 auto 0 25px;
   }
-
-  a {
-    color: #000;
+  &__nav {
+    display: flex;
+    font-weight: bold;
+    a {
+      color: #333333;
+      text-decoration: none;
+      margin: 0 15px;
+    }
+  }
+  &__phone {
+    margin-right: 24px;
+    font-weight: 800;
+    font-size: 17px;
+    line-height: 20px;
+    color: #95459A;
     text-decoration: none;
-
-    &:not(:last-child) {
-      margin-right: 20px;
-    }
-    &:hover {
-      border-bottom: 1px solid #000;
-    }
   }
 }
-
-

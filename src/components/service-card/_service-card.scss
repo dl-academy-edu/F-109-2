@@ -1,0 +1,21 @@
+.services-list {
+    display: flex;
+    margin: -10px;
+    flex-wrap: wrap;
+  }
+  
+  .services-item {
+    margin: 10px;
+    max-width: 280px;
+    flex-wrap: wrap;
+  }
+  
+  .services-name {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+    color: #2C3036;
+    text-decoration: none;
+    margin: 20px 0;
+    display: block;
+  }
