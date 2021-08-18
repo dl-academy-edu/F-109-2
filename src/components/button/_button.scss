@@ -1,25 +1,21 @@
-@mixin main-button ($color:#fff,$font-size:15px,$background:#008752) {
-  display: block;
-  text-align: center;
-  background: $background;
-  color: $color;
-  font-weight: bold;
-  font-size: $font-size;
-  line-height: 18px;
-  text-transform: uppercase;
-  max-width: 181px;
-  width: 100%;
-  padding: 11px;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-}
-
 .button {
-    @include main-button();
+    @include button();
+
+    &:hover {
+      background: $primary-hover;
+    }
+    &:active {
+      background: $primary-active;
+    }
   }
   
-  .button_secondary {
-    background: #95459A;
+.button_secondary {
+  background: $secondary;
+  &:hover {
+    background: $secondary-hover;
   }
+  &:active {
+    background: $secondary-active;
+  }
+}
   

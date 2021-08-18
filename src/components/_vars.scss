@@ -1,19 +1,17 @@
-$white:#fff;
+$white: #fff;
 
+$primary: #008752;
+$primary-hover: #26CD8B;
+$primary-active: #005232;
 
-// @mixin button($color:$white,$font-size:15px,$background:#008752) {
-//     display: block;
-//     text-align: center;
-//     background: $background;
-//     color: $color;
-//     font-weight: bold;
-//     font-size: $font-size;
-//     line-height: 18px;
-//     text-transform: uppercase;
-//     max-width: 181px;
-//     width: 100%;
-//     padding: 11px;
-//     border: none;
-//     cursor: pointer;
-//     text-decoration: none;
-//   }
+$secondary: #95459A;
+$secondary-hover: #D665DD;
+$secondary-active: #722A77;
+
+$blue: #00559D;
+
+$yellow: #FFB612;
+
+$light-smoke: #EEEEEE;
+
+$transition: .4s;

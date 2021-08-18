@@ -1,28 +1,9 @@
-// @import url(../../components/common.scss);
-$white: #fff;
 
-@mixin button ($color:$white,$font-size:15px,$background:#008752) {
-  display: block;
-  text-align: center;
-  background: $background;
-  color: $color;
-  font-weight: bold;
-  font-size: $font-size;
-  line-height: 18px;
-  text-transform: uppercase;
-  max-width: 181px;
-  width: 100%;
-  padding: 11px;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-}
+@import "../../components/vars";
+@import "../../components/mixins";
 
-@mixin font-size($font-size:16px,$line-height:18px,$font-weight:400) {
-  font-size: $font-size;
-  line-height: $line-height;
-  font-weight: $font-weight;
-}
+
+$white: $white;
 
 /* BANNER */
 
@@ -40,16 +21,13 @@ $white: #fff;
   }
 
   &__title {
-    font-weight: 900;
-    font-size: 90px;
-    line-height: 100%;
-    color: #00559D;
+    @include font-size(90px,100%,900);
+    color: $blue;
     max-width: 70%;
   }
 
   &__button {
-    @include button(#000);
-    // font-size: 24px;
+    @include button($font-size:24px,$background:$secondary);
     line-height: 29px;
     max-width: 360px;
   }
@@ -66,12 +44,11 @@ $white: #fff;
   }
   &__title {
     @include font-size(72px,100%,900);
-    color: #005DAB;
+    color: $blue;
     margin: 0 0 46px;
   }
   &__desc {
-    font-size: 18px;
-    line-height: 28px;
+    @include font-size(18px,28px);
     margin-bottom: 20px;
   }
 }

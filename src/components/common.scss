@@ -1,4 +1,5 @@
 @import "./vars";
+@import "./mixins";
 
 %psevdo {
   content: '';
@@ -50,8 +51,7 @@ fieldset {
 
 label,
 legend {
-  font-size: 18px;
-  line-height: 22px;
+  @include font-size(18px,22px);
   color: #6B6A6A;
   margin-bottom: 6px;
 }
@@ -67,11 +67,11 @@ textarea {
 
 input:focus,
 textarea:focus {
-  border-color: #FFB612;
+  border-color: $yellow;
 }
 
 .label-wrapper:focus-within label {
-  color: #FFB612;
+  color: $yellow;
 }
 
 textarea {
@@ -109,10 +109,9 @@ textarea {
 
 .checkbox-label,
 .radio-label {
+  @include font-size(18px,22px);
   position: relative;
   display: block;
-  font-size: 18px;
-  line-height: 22px;
   color: #6B6A6A;
   padding-left: 30px;
   cursor: pointer;
@@ -144,7 +143,7 @@ textarea {
 .radio-label:after {
   top: 2px;
   left: 5px;
-  background: #95459A;
+  background: $secondary;
   width: 17px;
   height: 17px;
   opacity: 0;
@@ -169,3 +168,4 @@ textarea {
 @import "./service-card/service-card";
 @import "./brand/brand";
 @import "./popup/popup";
+@import "./chat/chat";

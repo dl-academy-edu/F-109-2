@@ -19,11 +19,9 @@
     }
   }
   &__phone {
+    @include font-size(17px,20px,800);
     margin-right: 24px;
-    font-weight: 800;
-    font-size: 17px;
-    line-height: 20px;
-    color: #95459A;
+    color: $secondary;
     text-decoration: none;
   }
 }

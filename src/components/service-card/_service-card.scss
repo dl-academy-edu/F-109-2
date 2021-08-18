@@ -11,9 +11,7 @@
   }
   
   .services-name {
-    font-weight: bold;
-    font-size: 30px;
-    line-height: 36px;
+    @include font-size(30px,36px,bold);
     color: #2C3036;
     text-decoration: none;
     margin: 20px 0;

@@ -1,15 +1,16 @@
+@import "../../components/vars";
+@import "../../components/mixins";
+
 .contact-title {
-    font-weight: 900;
-    font-size: 50px;
-    line-height: 97.2%;
+    @include font-size(50px,97%,900);
     text-align: center;
-    color: #00559D;
+    color: $blue;
 }
 
 .contact-form {
     max-width: 780px;
     width: 100%;
-    background: #EEEEEE;
+    background: $light-smoke;
     margin: 0 auto 80px;
     padding: 50px 100px;
 }

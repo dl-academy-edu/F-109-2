@@ -1,5 +1,5 @@
 .footer {
-  background: #00559D;
+  background: $blue;
   padding: 53px 0;
 }
 .footer-wrapper {
@@ -8,10 +8,8 @@
   justify-content: space-between;
 }
 .footer-title {
-  color: #fff;
-  font-weight: 900;
-  font-size: 40px;
-  line-height: 130%;
+  @include font-size(40px,130%,900);
+  color: $white;
 }
 .social {
   display: flex;
