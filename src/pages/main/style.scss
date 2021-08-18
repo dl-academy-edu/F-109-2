@@ -5,6 +5,10 @@
 
 /* BANNER */
 
+.rotate {
+  transform: rotateX(180deg);
+}
+
 .banner {
   background-image: url('../static/images/banner.jpg');
   background-color: #E0E7ED;

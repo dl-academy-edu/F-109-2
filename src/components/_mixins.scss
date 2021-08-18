@@ -1,7 +1,7 @@
 @mixin button ($color:$white,$font-size:15px,$background:$primary) {
     display: block;
     text-align: center;
-    background: $background;
+    background-color: $background;
     color: $color;
     font-weight: bold;
     font-size: $font-size;

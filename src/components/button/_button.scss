@@ -1,8 +1,8 @@
 .button {
     @include button();
-
+    transition: background-color $transition;
     &:hover {
-      background: $primary-hover;
+      background-color: $primary-hover;
     }
     &:active {
       background: $primary-active;

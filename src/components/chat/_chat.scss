@@ -1,0 +1,105 @@
+@keyframes chat {
+    to {
+        max-height: 500px;
+    }
+}
+
+@keyframes chat-close {
+    from {
+        max-height: 488px;
+    }
+    to {
+        max-height: 0;
+    }
+}
+
+.chat {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.35);
+    width: 300px;
+    height: 488px;
+    overflow: hidden;
+
+    animation: chat-close 3s 8s forwards;
+
+    &__header {
+        background: #F6F6F8;
+        border: 1px solid #D9D9DB;
+        padding: 14px 15px;
+        position: absolute;
+        width: 100%;
+        z-index: 2;
+    }
+
+    &__title {
+        @include font-size(18px,22px,700);
+        color: #27253F;
+    }
+
+    &__desc {
+        @include font-size(12px,24px);
+        color: #6B6A6A;
+    }
+
+    &__close {
+        position: absolute;
+        top: 24px;
+        right: 15px;
+        cursor: pointer;
+    }
+
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
+    }
+
+    &__message-container {
+        max-height: 0;
+        animation: chat 2s forwards;
+
+        @for $i from 1 through 8 {
+            &:nth-child(#{$i}) {
+                animation-delay: $i + s;
+            }
+        }
+    }
+
+    &__message {
+        @include font-size(14px,16px);
+        padding: 8px 10px;
+        position: relative;
+        border-radius: 10px;
+        width: 70%;
+        &:after {
+            @extend %psevdo;
+            bottom: 0;
+            width: 10px;
+            height: 10px;
+        }
+    }
+
+    &__message_right {
+        background: #2198F4;
+        color: #fff;
+        margin: 0 10px 15px auto;
+        &:after {
+            right: -6px;
+            background: url(../../static/images/blue-tail.png);
+        }
+    }
+
+    &__message_left {
+        background: #E4E3E8;
+        margin: 0 auto 15px 10px;
+        &:after {
+            left: -6px;
+            background: url(../../static/images/gray-tail.png);
+        }
+    }
+}
