@@ -1,20 +1,13 @@
 @import "./vars";
 @import "./mixins";
 
-%psevdo {
-  content: '';
-  display: block;
-  position: absolute;
-}
-
 * {
   box-sizing: border-box;
 }
 
 body {
+  @include font-size(16px,21px);
   font-family: 'Lato', Arial, sans-serif;
-  font-size: 16px;
-  line-height: 21px;
   color: #2C3036;
   margin: 0;
   // @extend %psevdo;
