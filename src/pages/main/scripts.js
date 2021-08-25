@@ -22,3 +22,18 @@ window.addEventListener('keydown', function(event) {
         }
     }
 })
+
+
+
+
+var mobileMenuOpen = document.querySelector('.header__humburger_js');
+var mobileMenu = document.querySelector('.mobile');
+var mobileMenuClose = document.querySelector('.mobile__close_js');
+
+mobileMenuOpen.addEventListener('click', function() {
+    mobileMenu.classList.add('mobile_open');
+})
+
+mobileMenuClose.addEventListener('click', function() {
+    mobileMenu.classList.remove('mobile_open');
+})

@@ -10,12 +10,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="/static/images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
   @@include('header/index.html')
 
-  @@include('chat/index.html')
-  @@include('svg/index.html')
+  <!-- @@include('chat/index.html')
+  @@include('svg/index.html') -->
     <main>
         <section class="banner">
             <div class="container">
@@ -43,7 +44,7 @@
                 })
             </div>
 
-            <img src="static/images/about.jpg" alt="" width="580" height="430">
+            <img src="static/images/about.jpg" alt="" class="about__img">
         </section>
 
         <article class="brands container">

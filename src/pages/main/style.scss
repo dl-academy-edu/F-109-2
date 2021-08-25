@@ -20,12 +20,27 @@
 
   .container {
     padding: 100px 0 200px;
+    @media screen and (min-width: 1024px) and (max-width: 1280px) {
+      padding: 50px 20px 200px;
+    }
+
+    @media screen and (min-width: 375px) and (max-width: 1023px) {
+      padding: 55px 20px 360px;
+    }
   }
 
   &__title {
     @include font-size(90px,100%,900);
     color: $blue;
     max-width: 70%;
+
+    @media screen and (min-width: 1024px) and (max-width: 1200px) {
+      @include font-size(60px,100%,900);
+    }
+
+    @media screen and (min-width: 375px) and (max-width: 1023px) {
+      @include font-size(36px,110%,900);
+    }
   }
 
   &__button {
@@ -41,13 +56,38 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 106px;
+  flex-wrap: wrap;
   &__info {
     max-width: 45%;
+
+    @media screen and (max-width: 767px) {
+      max-width: 100%;
+      order: 2;
+    }
+  }
+
+  &__img {
+    box-shadow: 100px 70px 0 #008752;
+    @media screen and (max-width: 767px) {
+      order: 1;
+      margin-bottom: 60px;
+    }
+    @media screen and (min-width: 768px) {
+      max-width: 45%;
+    }
   }
   &__title {
     @include font-size(72px,100%,900);
     color: $blue;
     margin: 0 0 46px;
+
+    @media screen and (min-width: 1024px) and (max-width: 1200px) {
+      @include font-size(48px,100%,900);
+    }
+
+    @media screen and (max-width: 767px) {
+      @include font-size(36px,110%,900);
+    }
   }
   &__desc {
     @include font-size(18px,28px);
@@ -68,4 +108,33 @@
       -moz-justify-content: space-between;
           justify-content: space-between;
   margin-bottom: 80px;
+
+  flex-wrap: wrap;
+
+  @media (max-width: 1024px) {
+    justify-content: center;
+    margin: 0 -20px;
+  }
+
+  @media screen and (max-width:600px) {
+    margin-bottom: 40px;
+  }
+
+  li {
+    @media (max-width: 1024px) {
+      margin: 20px;
+    }
+  }
+}
+
+@media screen and (max-width:600px) {
+  .brands-list {
+
+  }
+
+  .about {
+    &__title {
+
+    }
+  }
 }

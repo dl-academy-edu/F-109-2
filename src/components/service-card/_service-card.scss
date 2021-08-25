@@ -1,13 +1,22 @@
 .services-list {
     display: flex;
     margin: -10px;
-    flex-wrap: wrap;
+
+    @media screen and (max-width: 767px) {
+      flex-wrap: wrap;
+    }
   }
   
   .services-item {
     margin: 10px;
     max-width: 280px;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
+
+    @media screen and (max-width: 767px) {
+      max-width: 50%;
+      margin: 0;
+      padding: 10px;
+    }
   }
   
   .services-name {
