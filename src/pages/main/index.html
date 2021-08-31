@@ -44,7 +44,14 @@
                 })
             </div>
 
-            <img src="static/images/about.jpg" alt="" class="about__img">
+
+            <picture>
+              <source srcset="static/images/about/mobile.jpg, static/images/about/mobile2x.jpg 2x" media="(max-width:767px)">
+              <source srcset="static/images/about/tablet.jpg, static/images/about/tablet2x.jpg 2x" media="(max-width:1024px)">
+              <source srcset="static/images/about/desktop.jpg, static/images/about/desktop2x.jpg 2x">
+              <img src="static/images/about/desktop.jpg" srcset="static/images/about/desktop.jpg, static/images/about/desktop2x.jpg 2x" alt="" class="about__img">
+            </picture>
+            
         </section>
 
         <article class="brands container">
